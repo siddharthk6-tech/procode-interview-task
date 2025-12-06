@@ -7,7 +7,7 @@ The task has been implemented using two separate approaches, both fully function
 
 A fully serverless container-based solution using:
 
-AWS ECS on Fargate
+* AWS ECS on Fargate
 
 Application Load Balancer
 
@@ -96,4 +96,5 @@ S3 + DynamoDB
 IAM
 
 GitHub
+
 
