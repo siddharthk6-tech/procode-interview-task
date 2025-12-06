@@ -1,4 +1,4 @@
-📌 Procode Cloud – Terraform Practical Assessment
+# Procode Cloud – Terraform Practical Assessment
 
 This repository contains my complete solution for the Procode Cloud Terraform technical assessment.
 The task has been implemented using two separate approaches, both fully functional and deployed on AWS:
@@ -96,3 +96,4 @@ S3 + DynamoDB
 IAM
 
 GitHub
+
