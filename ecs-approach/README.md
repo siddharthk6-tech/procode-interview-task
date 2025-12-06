@@ -52,8 +52,9 @@ The infrastructure deployed includes:
 
 1. **Clone the repository**
 ```bash
-git clone https://github.com/siddharthk6-tech/procode-ecs-webapp.git
-cd procode-ecs-webapp
+git clone https://github.com/siddharthk6-tech/procode-interview-task.git
+cd procode-interview-task
+cd ecs-approach
 ```
 
 2. **Initialize Terraform**
@@ -62,13 +63,11 @@ cd procode-ecs-webapp
 terraform init
 ```
 
-
 3. **Review the planned infrastructure**
 
 ```bash
 terraform plan
 ```
-
 
 4. **Apply the configuration**
 
@@ -109,6 +108,7 @@ To destroy all resources created by Terraform:
 ```bash 
 terraform destroy -auto-approve
 ```
+
 
 
 
