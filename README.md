@@ -29,6 +29,7 @@ A compute-based solution using:
 * Restricted IP access
 
 Directory: [ec2-approach](https://github.com/siddharthk6-tech/procode-interview-task/tree/main/ec2-approach)
+
 ---
 ## Proofs
 
@@ -48,11 +49,13 @@ Each approach has its own README explaining:
 ## Running Instructions
 
 Both approaches support:
-
+```bash
 terraform init
 terraform apply -auto-approve
+```
 
 Each approach outputs an ALB DNS name to test the web app.
+
 
 
 
