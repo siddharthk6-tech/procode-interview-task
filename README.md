@@ -8,93 +8,53 @@ The task has been implemented using two separate approaches, both fully function
 A fully serverless container-based solution using:
 
 * AWS ECS on Fargate
+* Application Load Balancer
+* VPC, Subnets, Security Groups
+* IAM roles
+* NGINX container
+* Restricted IP access
+* Remote backend using S3 + DynamoDB
 
-Application Load Balancer
-
-VPC, Subnets, Security Groups
-
-IAM roles
-
-NGINX container
-
-Restricted IP access (Optional Bonus)
-
-Remote backend using S3 + DynamoDB
-
-📂 Directory: ecs-approach/
+Directory: [ecs-approach](https://github.com/siddharthk6-tech/procode-interview-task/tree/main/ecs-approach)
 
 ## Approach 2 — EC2 with ALB (Nginx Web Server on EC2)
 
 A compute-based solution using:
 
-EC2 instance running NGINX via user-data
+* EC2 instance running NGINX via user-data
+* Application Load Balancer
+* VPC, Subnets, IGW, Route tables
+* Security groups
+* Remote backend using S3 + DynamoDB
+* Restricted IP access
 
-Application Load Balancer
+Directory: [ec2-approach](https://github.com/siddharthk6-tech/procode-interview-task/tree/main/ec2-approach)
+---
+## Proofs
 
-VPC, Subnets, IGW, Route tables
+Screenshots proving successful deployments have been uploaded in proofs directory of each approach.
 
-Security groups
-
-Optional SSH access via key pair
-
-Remote backend using S3 + DynamoDB
-
-Restricted IP access (Bonus)
-
-📂 Directory: ec2-approach/
-
-📁 Proofs
-
-Screenshots proving successful deployment and load balancer access are available in:
-
-📂 proofs/
-
-📖 Architecture Documentation
+---
 
 Each approach has its own README explaining:
 
-Assumptions
+* Assumptions
+* Commands to run
+* Output details
+* Testing instructions
 
-Architecture
+---
 
-Flow
-
-Commands to run
-
-Output details
-
-Testing instructions
-
-🚀 Running Instructions
+## Running Instructions
 
 Both approaches support:
 
 terraform init
 terraform apply -auto-approve
 
-
 Each approach outputs an ALB DNS name to test the web app.
 
-📌 Bonus Features Implemented
 
-Remote backend
 
-IP-restricted public access
-
-Documentation
-
-📌 Tools & Technologies
-
-Terraform
-
-AWS ECS Fargate / EC2
-
-AWS VPC Networking
-
-S3 + DynamoDB
-
-IAM
-
-GitHub
 
 
