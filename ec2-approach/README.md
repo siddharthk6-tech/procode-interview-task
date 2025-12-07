@@ -1,6 +1,6 @@
 # Procode EC2 WebApp – Terraform Deployment
 
-This repository contains a **Terraform configuration** that deploys a single EC2 instance running NGINX, fronted by an Application Load Balancer (ALB). The infrastructure includes networking components, security groups and load balanced EC2 instance running NGINX.
+This repository contains a **Terraform configuration** that deploys a single **EC2 instance** running NGINX, fronted by an Application Load Balancer (ALB). The infrastructure includes networking components, security groups and load balanced EC2 instance serving NGINX.
 
 ---
 
@@ -60,7 +60,7 @@ The infrastructure deployed includes:
 ```bash
 git clone https://github.com/siddharthk6-tech/procode-interview-task.git
 cd procode-interview-task
-cd ecs-approach
+cd ec2-approach
 ```
 
 2. **Initialize Terraform**
@@ -112,4 +112,5 @@ To destroy all resources created by Terraform:
 ```bash 
 terraform destroy -auto-approve
 ```
+
 
