@@ -16,7 +16,6 @@ resource "aws_instance" "web" {
   subnet_id              = aws_subnet.public1.id
   vpc_security_group_ids = [aws_security_group.ec2_sg.id]
   associate_public_ip_address = true
-  key_name               = var.key_name != "" ? var.key_name : null
   tags = { Name = "${var.app_name}-instance" }
 
   user_data = <<-EOF
