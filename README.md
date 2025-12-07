@@ -1,7 +1,7 @@
 # Procode Cloud – Terraform Practical Assessment
 
 This repository contains my complete solution for the Procode Cloud Terraform technical assessment.
-The task has been implemented using two separate approaches, both fully functional and deployed on AWS:
+The task has been implemented using two approaches — the main **ECS-based approach** and an **optional EC2-based approach** — both fully functional and deployed on AWS.
 
 ## Approach 1 — ECS Fargate (Containerized Web App)
 
@@ -23,10 +23,11 @@ A compute-based solution using:
 
 * EC2 instance running NGINX via user-data
 * Application Load Balancer
-* VPC, Subnets, IGW, Route tables
+* VPC, Subnets
 * Security groups
+*  Restricted IP access
 * Remote backend using S3 + DynamoDB
-* Restricted IP access
+
 
 Directory: [ec2-approach](https://github.com/siddharthk6-tech/procode-interview-task/tree/main/ec2-approach)
 
@@ -55,10 +56,4 @@ terraform apply -auto-approve
 ```
 
 Each approach outputs an ALB DNS name to test the web app.
-
-
-
-
-
-
 
