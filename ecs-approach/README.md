@@ -97,7 +97,7 @@ terraform apply -auto-approve
 
 Visit the alb_dns_name in your browser.
 
-You should see the NGINX welcome page indicating the container is running successfully.
+You should see the **NGINX Welcome Page** indicating the container is running successfully.
 
 ---
 
@@ -108,3 +108,4 @@ To destroy all resources created by Terraform:
 ```bash 
 terraform destroy -auto-approve
 ```
+
