@@ -36,18 +36,6 @@ resource "aws_security_group" "ec2_sg" {
     description     = "Allow ALB to access web server"
   }
 
-  # Optional SSH if key_name provided
-  dynamic "ingress" {
-    for_each = var.key_name != "" ? [1] : []
-    content {
-      from_port   = 22
-      to_port     = 22
-      protocol    = "tcp"
-      cidr_blocks = ["0.0.0.0/0"]
-      description = "SSH (only if key_name provided)"
-    }
-  }
-
   egress {
     from_port   = 0
     to_port     = 0

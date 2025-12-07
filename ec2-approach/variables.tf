@@ -5,13 +5,13 @@ variable "region" {
 }
 
 variable "app_name" {
-  description = "Application name prefix"
+  description = "Application name"
   type        = string
   default     = "procode-ec2-webapp"
 }
 
 variable "allowed_ip" {
-  description = "Your public IP (CIDR) allowed to access ALB (e.g. 82.4.231.71/32)"
+  description = "My public IP (CIDR) allowed to access ALB"
   type        = string
   default     = "82.4.231.71/32"
 }
@@ -22,9 +22,4 @@ variable "instance_type" {
   default     = "t3.micro"
 }
 
-variable "key_name" {
-  description = "Optional EC2 key pair name for SSH access. Leave empty if not needed."
-  type        = string
-  default     = ""
-}
 
