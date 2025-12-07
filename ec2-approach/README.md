@@ -1,6 +1,6 @@
 # Procode EC2 WebApp – Terraform Deployment
 
-This repository contains a Terraform configuration to deploy a simple NGINX-based web application on an Amazon EC2 instance. The infrastructure includes networking, security, and an EC2 instance running NGINX, fully automated using Terraform.
+This repository contains a **Terraform configuration** that deploys a single EC2 instance running NGINX, fronted by an Application Load Balancer (ALB). The infrastructure includes networking components, security groups and load balanced EC2 instance running NGINX.
 
 ---
 
@@ -12,39 +12,45 @@ The infrastructure deployed includes:
    - A single VPC with CIDR 10.0.0.0/16
    - Two public subnets
    - Internet Gateway and public route table
-   - Security Group allowing:
-   - HTTP (port 80) only from your IP (as per the interview task)
 
+2. **Security**
+   - ALB Security Group
+     * Allows HTTP (80) from your specified IP only
+   - EC2 Security Group
+     * Allows HTTP (80) only from the ALB security group (not from the public)
+  
+3. **Load Balancer**
+   - Application Load Balancer in public subnets
+   - Target Group with health checks
+   - Listener on port 80
+   - EC2 instance automatically registered to the target group
 
-2.  **EC2 Instance**
+4.  **EC2 Instance**
     - EC2 instance running Amazon Linux 2
     - User data installs and starts NGINX
-    - Instance is created in a public subnet
-    - Elastic IP attached to access the server
+    - Instance sits behind the ALB (not accessible directly)
 
-3.  **Terraform Backend**
+5.  **Terraform Backend**
     - State is stored in an S3 bucket
     - DynamoDB table is used for state locking
-
-Note:
-The S3 bucket and DynamoDB table were manually created before running Terraform.
 
 ---
 
 ## Prerequisites
 
 - AWS CLI configured with valid credentials
-- Terraform installed (v1.3+ recommended)
+- Terraform installed 
 - AWS account with permissions to create:
   - VPC, Subnets, Security Groups
+  - Application Load Balancer (ALB)
   - EC2 Instances and IAM Roles
-  - S3 Bucket + DynamoDB (for remote state)
+  - S3 Bucket + DynamoDB
 
 ---
 ### Backend Configuration
 
 - Terraform remote state is stored in an S3 bucket and uses a DynamoDB table for state locking.
-- **Note:** The S3 bucket and DynamoDB table were manually created prior to running Terraform.
+- The S3 bucket and DynamoDB table were manually created prior to running Terraform.
 
 ---
 
@@ -80,14 +86,14 @@ terraform apply -auto-approve
 ## Outputs
 
 After deployment, Terraform prints:
+                    
+ **alb_dns_name** → [Public ALB URL to access NGINX]()     
+ **ec2_instance_id** → [The EC2 instance ID created]() 
+ **alb_security_group_id** → [Security Group of ALB]()
+ **ec2_security_group_id** → [Security Group of EC2]()
+ **vpc_id** → [VPC IDs]()           
+ **subnet_ids** → [List of Public Subnets]()      
 
-ec2_public_ip → Use this IP to access the NGINX page
-
-vpc_id
-
-subnet_ids
-
-security_group_id
 
 ---
 
@@ -106,3 +112,4 @@ To destroy all resources created by Terraform:
 ```bash 
 terraform destroy -auto-approve
 ```
+
