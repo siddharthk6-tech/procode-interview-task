@@ -1,6 +1,6 @@
 # Procode ECS WebApp - Terraform Deployment
 
-This repository contains a **Terraform configuration** to deploy a basic containerized web application on AWS using **ECS Fargate**. The infrastructure includes networking, security, and a load-balanced ECS service running an NGINX container.
+This repository contains a **Terraform configuration** to deploy a basic containerized web application on AWS using **ECS Fargate**. The infrastructure includes networking components, security groups, and a load-balanced ECS service running an NGINX container.
 
 ---
 
@@ -108,13 +108,3 @@ To destroy all resources created by Terraform:
 ```bash 
 terraform destroy -auto-approve
 ```
-
-
-
-
-
-
-
-
-
-
