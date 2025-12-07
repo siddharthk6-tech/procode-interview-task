@@ -87,11 +87,15 @@ terraform apply -auto-approve
 
 After deployment, Terraform prints:
                     
- **alb_dns_name** → [Access the web application using this ALB DNS.](https://github.com/siddharthk6-tech/procode-interview-task/blob/main/ec2-approach/proofs-ec2/alb-showing-nginx_page.png)     
+ **alb_dns_name** → [Access the web application using this ALB DNS.](https://github.com/siddharthk6-tech/procode-interview-task/blob/main/ec2-approach/proofs-ec2/alb-showing-nginx_page.png)
+
  **ec2_instance_id** → [The EC2 instance ID created](https://github.com/siddharthk6-tech/procode-interview-task/blob/main/ec2-approach/proofs-ec2/ec2_instance-name.png) 
+ 
  **alb_security_group_id** → [Security Group of ALB](https://github.com/siddharthk6-tech/procode-interview-task/blob/main/ec2-approach/proofs-ec2/tf-apply-output.png)
+ 
  **ec2_security_group_id** → [Security Group of EC2](https://github.com/siddharthk6-tech/procode-interview-task/blob/main/ec2-approach/proofs-ec2/tf-apply-output.png)
- **vpc_id** → [VPC IDs](https://github.com/siddharthk6-tech/procode-interview-task/blob/main/ec2-approach/proofs-ec2/tf-apply-output.png)           
+ 
+ **vpc_id** → [VPC IDs](https://github.com/siddharthk6-tech/procode-interview-task/blob/main/ec2-approach/proofs-ec2/tf-apply-output.png)     
  **subnet_ids** → [List of Public Subnets](https://github.com/siddharthk6-tech/procode-interview-task/blob/main/ec2-approach/proofs-ec2/tf-apply-output.png)      
 
 
@@ -112,6 +116,7 @@ To destroy all resources created by Terraform:
 ```bash 
 terraform destroy -auto-approve
 ```
+
 
 
 
