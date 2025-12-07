@@ -34,19 +34,19 @@ The infrastructure deployed includes:
 ## Prerequisites
 
 - AWS CLI configured with appropriate credentials.
-- Terraform installed (v1.3+ recommended).
+- Terraform installed 
 - An AWS account with permissions to create:
   - VPC, Subnets, Security Groups
   - ECS Cluster, Tasks, Services
   - IAM Roles and Policies
   - Application Load Balancer
-  - S3 Bucket and DynamoDB (for remote state)
+  - S3 Bucket and DynamoDB 
 
 ---
 ### Backend Configuration
 
 - Terraform remote state is stored in an S3 bucket and uses a DynamoDB table for state locking.
-- **Note:** The S3 bucket and DynamoDB table were manually created prior to running Terraform.
+- The S3 bucket and DynamoDB table were manually created prior to running Terraform.
 ---
 ## How to Deploy
 
@@ -79,17 +79,17 @@ terraform apply -auto-approve
 
 ## Outputs
 
-**alb_dns_name** → [Access the web application using this ALB DNS.](https://github.com/siddharthk6-tech/procode-ecs-webapp/blob/main/proofs/alb-showing-nginx_page.png)
+**alb_dns_name** → [Access the web application using this ALB DNS.](https://github.com/siddharthk6-tech/procode-interview-task/blob/main/ecs-approach/proofs/alb-showing-nginx_page.png)
 
-**ecs_cluster_name** → [Name of ECS Cluster.](https://github.com/siddharthk6-tech/procode-ecs-webapp/blob/main/proofs/ECS-cluster.png)
+**ecs_cluster_name** → [Name of ECS Cluster.](https://github.com/siddharthk6-tech/procode-interview-task/blob/main/ecs-approach/proofs/ECS-cluster.png)
 
-**ecs_service_name** → [Name of ECS Service.](https://github.com/siddharthk6-tech/procode-ecs-webapp/blob/main/proofs/ECS-service.png)
+**ecs_service_name** → [Name of ECS Service.](https://github.com/siddharthk6-tech/procode-interview-task/blob/main/ecs-approach/proofs/ECS-service.png)
 
-**vpc_id** → [VPC ID.](https://github.com/siddharthk6-tech/procode-ecs-webapp/blob/main/proofs/Terraform-apply-output.png)
+**vpc_id** → [VPC ID.](https://github.com/siddharthk6-tech/procode-interview-task/blob/main/ecs-approach/proofs/Terraform-apply-output.png)
 
-**subnet_ids** → [List of public subnet IDs.](https://github.com/siddharthk6-tech/procode-ecs-webapp/blob/main/proofs/Terraform-apply-output.png)
+**subnet_ids** → [List of public subnet IDs.](https://github.com/siddharthk6-tech/procode-interview-task/blob/main/ecs-approach/proofs/Terraform-apply-output.png)
 
-**security_group_id** → [Security Group ID for ECS tasks.](https://github.com/siddharthk6-tech/procode-ecs-webapp/blob/main/proofs/Terraform-apply-output.png)
+**security_group_id** → [Security Group ID for ECS tasks.](https://github.com/siddharthk6-tech/procode-interview-task/blob/main/ecs-approach/proofs/Terraform-apply-output.png)
 
 ---
 
