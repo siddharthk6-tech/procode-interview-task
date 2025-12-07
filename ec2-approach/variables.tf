@@ -11,7 +11,7 @@ variable "app_name" {
 }
 
 variable "allowed_ip" {
-  description = "My public IP (CIDR) allowed to access ALB"
+  description = "My public IP allowed to access ALB"
   type        = string
   default     = "82.4.231.71/32"
 }
